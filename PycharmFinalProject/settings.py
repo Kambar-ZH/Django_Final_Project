@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'book',
 ]
 
 MIDDLEWARE = [
@@ -154,7 +155,7 @@ LOGGING = {
         }
     },
     'loggers': {
-        'api': {
+        'book': {
             'handlers': ['file_handler', 'console_handler'],
             'level': 'DEBUG',
         },
@@ -183,7 +184,6 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.BasicAuthentication',
     ),
-    'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',),
     'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.NamespaceVersioning',
 }
 
